@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/2149b27acd.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    body{
+        background-color: #ECF2FF;
+        margin-top: 0;
+    }
+    #frm-body{
+        width: 30rem;
+        height: 40rem;
+        /* border: 2px solid black; */
+        border-radius: 2rem;
+        margin-top: -7rem;
+        /* position: absolute; */
+        /* background: url(https://static.wixstatic.com/media/49a292_bdd82887ecde4cd6a8edfe18142a3798.jpg/v1/fill/w_1807,h_1920,al_c,q_90,usm_0.66_1.00_0.01/49a292_bdd82887ecde4cd6a8edfe18142a3798.jpg); */
+        background: linear-gradient(#002b5b,#1D267D);
+       
+    }
+    #main{
+        /* border: 2px solid black; */
+        width: 60rem;
+        height: 40rem;
+        margin-left: 10rem;
+        margin-top: 10rem;
+        border-radius: 2rem;
+        margin-bottom: 3rem;
+
+    }
+    form{
+        margin: 7rem;
+    }
+    .labels{
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+
+    input{
+        outline: none;
+        border: none;
+        border-radius: 2rem;
+        height: 2rem;
+        font-weight: bold;
+        padding-left: 1rem;
+        background-color: #4c517a;
+        color: white;
+       
+    }
+
+    ::placeholder{
+        color: rgb(189, 186, 186);
+    }
+
+    #sub{
+        width: 7.5rem;
+        height: 3rem;
+        border-radius: 1rem;
+        /* border: 4px solid rgb(3, 3, 63); */
+        border: none;
+        background: linear-gradient(#abb0e9,#6c6f9c);
+        margin-left: 4rem;
+        margin-top: 4rem;
+        cursor: pointer;
+        color: rgb(4, 14, 58);
+        font-size: 1.1rem;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+    }
+
+    #sub:hover{
+        box-shadow: 0 3px 3px 0 #080a29,0 10px 10px 0 #05093a;
+    }
+
+    #main{
+        animation: main-trans 3s;
+    }
+
+    @keyframes main-trans {
+
+        from{
+            opacity: 0.5;
+            transform: translateY(20%);
+        }
+        to{
+            opacity: 1;
+        }
+        
+    }
+
+    #home{
+        color: #002b5b;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left:-5rem;
+  
+    }
+
+    #home-frm{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+</style>
+
+<body>
+
+    <form id="home-frm" action="/" method="post" ><button  id="home" ><i class="fa-solid fa-house" style="color: #002b5b;"></i> &nbsp; Home</button></form>
+
+    <div id="main">
+
+        <img src="https://wallpaperaccess.com/full/5793716.jpg" style="width: 35rem;height: 40rem;object-position: 0% 50%; margin-left: 28rem;position: absolute; object-fit: cover;border-top-right-radius: 2rem;border-bottom-right-radius: 2rem;z-index: -1;" alt="">
+
+    <div id="frm-body">
+        <form action="/Details" method="post">
+        <h1 style="color: white;margin-bottom: 4rem;font-size: 3rem;padding-top: 2rem;position: relative;" >Register for donation</h1>
+        <span><label for="Name"><h3 class="labels" style="margin-left: -3rem;" >Name</h3></label> <input placeholder="Enter full name" style="width: 8.5rem;margin-left: -3.4rem;" type="text" id="Name" name="Name" value=""></span> 
+       <span><label  for="age"><h3 class="labels"  style="margin-top: -3.8rem; margin-left: 9.2rem;position: absolute;" >Age</h3></label> </label> <input placeholder="Age" type="number" min="18" max="60" style="width: 3rem; margin-left: 2.2rem;" name="age" id=""></span> 
+       <label for="gender"><h3 style="margin-left: 15.4rem;margin-top: -3.6rem;" class="labels">Gender</h3></label> <input style="width:5rem;margin-left: 15rem;position: absolute;" placeholder="male/female" list="sex" name="gender" id="gender">
+       <datalist id="sex">
+        <option value="male">
+        <option value="female">
+       </datalist>
+
+      <span> 
+       <label for="dob"><h3 style="color: white;margin-left: -3rem; margin-top: 5rem;margin-bottom: 0.7rem;" >Date of birth</h3></label><input style="margin-left:-3.5rem;"  type="date" name="dob" id="dob"></span>
+       <label for="bg"><h3 style="color: white;margin-left: 8rem;margin-top: -4.2rem;margin-bottom: 0.8rem;" >Blood group</h3></label> <input style="width: 6rem; margin-left: 7.5rem;" list="bgrp" placeholder="Upper case lettrs" name="bg" id="bg">
+       <datalist id="bgrp">
+         <option value="AB+">
+        <option value="O+">
+        <option value="O-">
+        <option value="A+">
+        <option value="B+">
+
+       </datalist>
+         <br><br>
+        
+       <button id="sub" type="submit">Submit</button>
+    </form>
+    </div>
+
+
+    </div>
+
+
+    
+    
+</body>
+</html>
